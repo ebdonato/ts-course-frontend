@@ -1,6 +1,7 @@
+import { FC, ReactElement } from "react"
 import "./App.css"
 
-function App() {
+const App: FC = (): ReactElement => {
     return <div className="App">Hello World</div>
 }
 
