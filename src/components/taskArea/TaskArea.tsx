@@ -6,6 +6,8 @@ import { format } from "date-fns"
 // import { Task } from "../task/task"
 import { TaskCounter } from "../taskCounter/taskCounter"
 import { Status } from "../createTaskForm/enums/Status"
+import { Task } from "../task/task"
+import { Priority } from "../createTaskForm/enums/Priority"
 
 export const TaskArea: FC = (): ReactElement => {
     return (
@@ -29,9 +31,9 @@ export const TaskArea: FC = (): ReactElement => {
                     <TaskCounter status={Status.completed} count={2} />
                 </Grid>
                 <Grid item display="flex" flexDirection="column" xs={10} md={8}>
-                    {/* <Task />
-                    <Task />
-                    <Task /> */}
+                    <Task priority={Priority.high} />
+                    <Task priority={Priority.low} />
+                    <Task priority={Priority.normal} />
                 </Grid>
             </Grid>
         </Grid>
